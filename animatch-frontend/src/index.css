@@ -1,0 +1,147 @@
+/* ============================================================
+   AniMatch v2.0 — Global Styles & Design Token Definitions
+   ============================================================ */
+
+/* --- Google Fonts Import (Inter) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- Tailwind directives --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Design tokens: dark anime-appropriate palette ---
+   Deep navy surface + electric violet primary + crisp white ink
+   ------------------------------------------------------------ */
+:root {
+  /* Core accent — electric violet */
+  --color-primary:       #7C3AED;   /* vibrant violet CTA */
+
+  /* Text */
+  --color-ink:           #F0F0F5;   /* near-white body & heading text */
+  --color-muted:         #8B8FA8;   /* captions, tags, metadata */
+
+  /* Surfaces — deep navy dark mode */
+  --color-surface:       #0D0F1A;   /* page background */
+  --color-surface-raised: #161927;  /* cards, quiz options, drawers */
+
+  /* Borders */
+  --color-border:        #272A40;   /* card borders, dividers, inputs */
+
+  /* Status */
+  --color-success:       #22C55E;   /* upvote confirmation, positive */
+  --color-warning:       #F59E0B;   /* caution states */
+  --color-danger:        #EF4444;   /* errors, downvote, destructive */
+}
+
+/* ============================================================
+   Base resets & global typography
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   Typography scale matching design-system.md
+   ============================================================ */
+.text-display {
+  font-size: 2rem;       /* 32px */
+  line-height: 2.5rem;   /* 40px */
+  font-weight: 700;
+}
+
+.text-h1 {
+  font-size: 1.5rem;     /* 24px */
+  line-height: 2rem;     /* 32px */
+  font-weight: 600;
+}
+
+.text-h2 {
+  font-size: 1.25rem;    /* 20px */
+  line-height: 1.75rem;  /* 28px */
+  font-weight: 600;
+}
+
+.text-h3 {
+  font-size: 1rem;       /* 16px */
+  line-height: 1.5rem;   /* 24px */
+  font-weight: 600;
+}
+
+.text-body {
+  font-size: 1rem;       /* 16px */
+  line-height: 1.5rem;   /* 24px */
+  font-weight: 400;
+}
+
+.text-body-sm {
+  font-size: 0.875rem;   /* 14px */
+  line-height: 1.25rem;  /* 20px */
+  font-weight: 400;
+}
+
+.text-caption {
+  font-size: 0.75rem;    /* 12px */
+  line-height: 1rem;     /* 16px */
+  font-weight: 400;
+}
+
+/* ============================================================
+   Focus rings — always visible, never removed without replacement
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   Scrollbar — subtle dark styling
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* ============================================================
+   Motion: respect prefers-reduced-motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

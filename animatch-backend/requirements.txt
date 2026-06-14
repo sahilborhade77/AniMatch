@@ -1,0 +1,15 @@
+# torch and transformers are excluded — ONNX runtime only. Adding them will exceed the 120MB memory budget.
+
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic==2.7.4
+pydantic-settings==2.3.3
+onnxruntime==1.18.0
+tokenizers==0.19.1
+qdrant-client==1.9.1
+supabase==2.5.1
+python-jose[cryptography]==3.3.0
+python-dotenv==1.0.1
+httpx==0.27.0
+numpy<2.0.0
+
