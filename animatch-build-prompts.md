@@ -1,4 +1,4 @@
-# AniMatch v2.0 — Full Build Prompt List
+# AniMatch v2.0 — Full Build Prompt Use List
 > Mapped to actual file structure. Run in order — each prompt builds on the last.
 
 ---
